@@ -27,8 +27,8 @@ jobs:
       - name: install build-deps
         run: apt update && apt -y --no-install-recommends build-dep .
       - name: Setup upterm session
-        uses: lhotari/action-upterm@master
+        uses: uses: mxschmitt/action-tmate@v3
         with:
           limit-access-to-actor: true
-          limit-access-to-users: furmur
-          wait-timeout-minutes: 10
+          timeout-minutes: 10
+          sudo: false
